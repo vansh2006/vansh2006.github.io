@@ -4,6 +4,14 @@ body {
     padding: 2em
 }
 
+.fab {
+    display: inline-block;
+    width: 30px;
+    border-radius: 50%;
+    background: white;
+    color: rgb(39, 39, 39);
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -38,3 +46,33 @@ span {
     margin-bottom: 1em;
     text-align: left;
 }
+
+.link {
+    color: #0063ee;
+}
+
+.link:hover {
+    color: #0000ee;
+}
+
+.btn{
+    border-radius: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    height: 2em;
+    cursor: pointer;
+    background-color: #c6f4ff;
+    border: 1px solid #c6f4ff;
+    color: #3c4043;
+
+}
+
+.btn:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #d1f6ff;
+    border: 1px solid #9cecff;
+    color: #202124;
+}
+
