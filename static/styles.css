@@ -47,12 +47,16 @@ span {
     text-align: left;
 }
 
-.link {
+a:link {
     color: #0063ee;
 }
 
-.link:hover {
+a:link:hover {
     color: #0000ee;
+}
+
+a:visited {
+    color: #0063ee;
 }
 
 .btn{
