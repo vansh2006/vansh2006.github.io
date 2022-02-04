@@ -53,6 +53,10 @@ p {
     text-align: left;
 }
 
+.left-pad {
+    padding-left: 16%;
+}
+
 a:link {
     color: #0063ee;
 }
