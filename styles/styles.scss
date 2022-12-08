@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import 'navbar';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+// Hero Section CSS
+.hero {
+    background-color: $light;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+        height: 75vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &--left {
+            width: 100%;
+            line-height: 1.2;
+
+
+            @include tablet {
+                padding: 5rem 0;
+            }
+
+            @include mobile {
+                line-height: 1.5;
+            }
+        }
+
+        &--left h1 {
+            font-size: 4rem;
+            color: $lime;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--left h2 {
+            font-size: 3rem;
+            color: $dark;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+
+        &--left p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $lime;
+            margin-top: 1rem;
+
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--btn {
+            font-size: 1rem;
+            background-color: $lime;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 4px;
+            color: $light;
+            margin-top: 2rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        &--btn a {
+            position: relative;
+            z-index: 2;
+            color: $light;
+            text-decoration: none;
+
+        }
+
+        &--btn:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $orangeRed;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        &--btn:hover:after {
+            width: 100%;
+        }
+
+        &--right {
+             text-align: center;
+        }
+
+        &--img {
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+}
+
+
+// Socials Section CSS
+.socials {
+    background-color: $light;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    
+    .tooltip{
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        background: #fff;
+        color: #fff;
+        padding: 10px 18px;
+        font-size: 20px;
+        font-weight: 500;
+        border-radius: 25px;
+        opacity: 0;
+        pointer-events: none;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        font-family: 'Poppins', sans-serif;
+
+      }
+
+    span {
+        display: block;
+        height: 60px;
+        width: 60px;
+        background: #fff;
+        border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        line-height: 60px;
+        font-size: 25px;
+    }
+
+    .icon {
+        margin: 0 20px;
+        text-align: center;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        z-index: 2;
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+        &--discord:hover {
+            color: $discord;
+        }
+
+        &--twitter:hover {
+            color: $twitter;
+        }
+
+        &--instagram:hover {
+            color: $instagram;
+        }
+
+        &--github:hover {
+            color: $github;
+        }
+
+    }
+
+    a {
+        color: $dark;
+    }
+    .discord:hover span,
+    .discord:hover .tooltip,
+    .discord:hover .tooltip:before{
+      background: $discord;
+    }
+    .twitter:hover span,
+    .twitter:hover .tooltip,
+    .twitter:hover .tooltip:before{
+      background: $twitter;
+    }
+    .instagram:hover span,
+    .instagram:hover .tooltip,
+    .instagram:hover .tooltip:before{
+      background: $instagram;
+    }
+    .github:hover span,
+    .github:hover .tooltip,
+    .github:hover .tooltip:before{
+      background: $github;
+    }
+
+    .icon:hover .tooltip{
+        top: -70px;
+        opacity: 1;
+        pointer-events: auto;
+      }
+        .icon .tooltip:before{
+        position: absolute;
+        content: "";
+        height: 15px;
+        width: 15px;
+        background: #fff;
+        left: 50%;
+        bottom: -6px;
+        transform: translateX(-50%) rotate(45deg);
+        transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        .icon:hover span{
+            color: #fff;
+          }
+          .icon:hover .tooltip{
+            text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+          }
+}
+
+.copyright {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background-color: $light;
+    color: dark;
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.projects {
+    background-color: $light;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+
+
+    &__container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        align-items: center;
+        justify-items: center;
+        margin: 0;
+        height: 75vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        &--left {
+            width: 100%;
+            line-height: 1.2;
+
+
+            @include tablet {
+                padding: 5rem 0;
+            }
+
+            @include mobile {
+                line-height: 1.5;
+            }
+        }
+
+        &--left h1 {
+            font-size: 4rem;
+            color: $lime;
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--left h2 {
+            font-size: 3rem;
+            color: $dark;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+
+        &--left p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $lime;
+            margin-top: 1rem;
+
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--btn {
+            font-size: 1rem;
+            background-color: $lime;
+            padding: 14px 32px;
+            border: none;
+            border-radius: 4px;
+            color: $light;
+            margin-top: 2rem;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        &--btn a {
+            position: relative;
+            z-index: 2;
+            color: $light;
+            text-decoration: none;
+
+        }
+
+        &--btn:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: $orangeRed;
+            transition: all 0.3s;
+            border-radius: 4px;
+        }
+
+        &--btn:hover:after {
+            width: 100%;
+        }
+
+        &--right {
+             text-align: center;
+        }
+
+        &--img {
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    flex-direction: column;
+    padding-left: 3%;
+    text-align: left;
+}
+
+span {
+    font-size: 1.5rem;
+    padding-bottom: 0.5em;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    text-align: left;
+}
+
+.left-pad {
+    padding-left: 16%;
+}
+
+
+.button{
+    border-radius: 5%;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    height: 2em;
+    cursor: pointer;
+    background-color: #c6f4ff;
+    border: 1px solid #c6f4ff;
+    color: #3c4043;
+
+}
+
+.button:hover {
+    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+    background-color: #d1f6ff;
+    border: 1px solid #9cecff;
+    color: #202124;
+}

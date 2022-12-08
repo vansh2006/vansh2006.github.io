@@ -1,35 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>My Site | Home</title>
-        <link rel="stylesheet" href="static/styles.css">
-        <link rel="shortcut icon" href="static/favicon.ico"/>
+        <title>Vansh Shah | Home</title>
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="shortcut icon" href="images/favicon.png"/>
+        <script src="https://kit.fontawesome.com/8f7552ef45.js" crossorigin="anonymous"></script>
     </head>
-    <header>
-        <img class="round" src="static/icon.png" alt="Icon">
-        <h1>Vansh Shah</h1>
-    </header>
+
     <body>
-        <div class="container">
-            <div class="list">
-                <span>👋 Hello! I am Vansh Shah (he/him).</span>
-                <span>📚 I am currently in Secondary School.</span>
-                <span>🏏 Some of my hobbies <a href="/hobbies.html">are</a>.</span>
-                <span>💬 Follow my <a href="/socials.html">social</a> accounts.</span>
-                <span>🏅 A few of my <a href="/accomplishments.html">accomplishments</a>.</span>
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <a href="/" class="navbar__logo"><img src="images/logo.png" alt="" class="navbar__img"></a>
+            <div class="navbar__bars">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar__menu">
+                <a href="/" class="navbar__menu--links">Home</a>
+                <a href="/socials.html" class="navbar__menu--links">Socials</a>
+                <a href="/accomplishments.html" class="navbar__menu--links">Achievements</a>
+                <a href="/hobbies.html" class="navbar__menu--links">Interests</a>
+                <a href="/clubs.html" class="navbar__menu--links">ECA's</a>
+                <a href="/" class="navbar__menu--links" id="button">About Me</a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <div class="hero__container">
+                <div class="hero__container--left">
+                    <h1>Hello! My name is Vansh Shah</h1>
+                    <h2>I am a high-school student.</h2>
+                    <p>Welcome to my website!</p>
+                    <button class="hero__container--btn">
+                        <a href="">About Me</a>
+                    </button>
+                </div>
+                <div class="hero_container--right">
+                    <img src="images/avatar.svg" alt="icon" class="hero__container--img">
+                </div>
             </div>
         </div>
-        <div class="container">
-            <span>
-                <a class="button" href="/">🏠 Home</a>
-                <a class="button" href="/socials.html">📱 Socials</a>
-                <a class="button" href="/accomplishments.html">🏅 Accomplishments</a>
-                <a class="button" href="/hobbies.html">🥏 Hobbies</a>
-                <a class="button" href="/clubs.html">⛳ Clubs</a>
-            </span>
-        </div>
     </body>
+    <div class="socials">
+        <div class="icon discord">
+            <p class="tooltip">AIRMaster124#6631</p>
+            <span><i class="fab fa-discord"></i></span>
+        </div>
+        <a href="https://twitter.com/shahv99" target="_blank"><div class="icon twitter">
+            <p class="tooltip">Twitter</p>
+            <span><i class="fab fa-twitter"></i></span>
+        </div></a>
+        <a href="https://www.instagram.com/vansh_shah_2006/" target="_blank"><div class="icon instagram">
+            <p class="tooltip">Instagram</p>
+            <span><i class="fab fa-instagram"></i></span>
+        </div></a>
+        <a href="https://github.com/vansh2006" target="_blank"><div class="icon github">
+            <p class="tooltip">Github</p>
+            <span><i class="fab fa-github"></i></span>
+        </div></a>
+        
+    </div>
     <footer>
-        <p>Copyright © 2022</p>
+        <p class="copyright">Copyright © 2022</p>
     </footer>
 </html>
