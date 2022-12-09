@@ -126,7 +126,6 @@
     }
 }
 
-
 // Socials Section CSS
 .socials {
     background-color: $light;
@@ -255,14 +254,117 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.projects {
+// Projects and Accomplishments Section CSS
+.acc {
+    background-color: $light;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+
+    iframe {
+        height: 18pc;
+        width: 32pc;
+        display: block;
+        margin-left: 0ch;
+        padding-top: 2ch;
+    }
+
+    a {
+        position: relative;
+        z-index: 2;
+        color: $aquaBlue;
+        text-decoration: none;
+    }
+    
+    h1 {
+        font-size: 4rem;
+        color: $lime;
+        text-align: center;
+        padding-bottom: 2rem;
+
+        @include mobile {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        margin: 0;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+        vertical-align: top;        
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+        .part {
+            padding-bottom: 2vh;
+        }
+
+        &--left {
+            width: 100%;
+            padding-right: 0.5rem;
+
+            @include tablet {
+                padding: 5rem 0;
+            }
+
+            @include mobile {
+                line-height: 1.5;
+            }
+        }
+
+        h2 {
+            font-size: 3rem;
+            color: $dark;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 700;
+            color: $darkText;
+            margin-top: 1rem;
+
+
+            @include mobile {
+                font-size: 1.5rem;
+            }
+        }
+
+        &--right {
+             text-align: center;
+             padding-left: 0.5rem;
+        }
+
+        &--img {
+            display: block;
+            height: 80%;
+            width: 80%;
+            margin-left: 1ch;
+            margin-right: auto;
+            padding-top: 2ch;
+        }
+
+    }
+}
+
+// About Me Section CSS
+.about {
     background-color: $light;
     padding: 0.5rem calc((100vw - 1200px)/2);
 
 
     &__container {
         display: grid;
-        grid-template-columns: auto auto auto;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: center;
         margin: 0;
@@ -278,7 +380,7 @@
             height: 100%;
         }
 
-        &--left {
+        &--right {
             width: 100%;
             line-height: 1.2;
 
@@ -292,7 +394,7 @@
             }
         }
 
-        &--left h1 {
+        &--right h1 {
             font-size: 4rem;
             color: $lime;
 
@@ -301,7 +403,7 @@
             }
         }
 
-        &--left h2 {
+        &--right h2 {
             font-size: 3rem;
             color: $dark;
 
@@ -310,7 +412,7 @@
             }
         }
 
-        &--left p {
+        &--right p {
             font-size: 2rem;
             font-weight: 700;
             color: $lime;
@@ -360,66 +462,14 @@
             width: 100%;
         }
 
-        &--right {
+        &--left {
              text-align: center;
         }
 
         &--img {
-            height: 100%;
-            width: 100%;
+            height: 70%;
+            width: 70%;
         }
 
     }
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    flex-flow: row nowrap;
-    flex-direction: column;
-    padding-left: 3%;
-    text-align: left;
-}
-
-span {
-    font-size: 1.5rem;
-    padding-bottom: 0.5em;
-}
-
-.list {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    text-align: left;
-}
-
-.left-pad {
-    padding-left: 16%;
-}
-
-
-.button{
-    border-radius: 5%;
-    padding-left: 1em;
-    padding-right: 1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    height: 2em;
-    cursor: pointer;
-    background-color: #c6f4ff;
-    border: 1px solid #c6f4ff;
-    color: #3c4043;
-
-}
-
-.button:hover {
-    box-shadow: 0 1px 1px rgba(0,0,0,.1);
-    background-color: #d1f6ff;
-    border: 1px solid #9cecff;
-    color: #202124;
 }

@@ -1,50 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>My Site | Accomplishments</title>
+        <title>Vansh Shah | Accomplishments</title>
         <link rel="stylesheet" href="styles/styles.css">
-        <link rel="shortcut icon" href="images/favicon.ico"/>
+        <link rel="shortcut icon" href="images/favicon.png"/>
+        <script src="https://kit.fontawesome.com/8f7552ef45.js" crossorigin="anonymous"></script>
     </head>
-    <header>
-        <a href="https://www.instagram.com/p/CYoiRRJqRly/?utm_source=ig_web_copy_link"><img class="round" src="images/light.jpg" alt="Icon"></a>
-        <h1>Accomplishments</h1>
-    </header>
     <body>
-        <div class="container">
-            <div class="list">
-                <div>
-                    <h2>💻 <a href="https://www.peelschools.org/elementary/get-involved/peel-skills-challenge/">Peel Skills Challenge</a></h5>
-                    <p>The Peel Skills Challenge (PSC) is a competition across the Province of Ontario</p>
-                    <p>I competed in a team of 4 in the category of Animation and won 2nd place for the animation <a href="https://youtu.be/N9nillzDaa4">Every Drop Counts</a>.</p>
+        <!-- Navbar Section -->
+        <nav class="navbar">
+            <a href="/" class="navbar__logo"><img src="images/logo.png" alt="" class="navbar__img"></a>
+            <div class="navbar__bars">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar__menu">
+                <a href="/" class="navbar__menu--links">Home</a>
+                <a href="/projects.html" class="navbar__menu--links">Projects</a>
+                <a href="/accomplishments.html" class="navbar__menu--links">Accomplishments</a>
+                <a href="/clubs.html" class="navbar__menu--links">ECA's</a>
+                <a href="/about-me.html" class="navbar__menu--links" id="button">About Me</a>
+            </div>
+        </nav>
+        <!-- Accomplishments Section -->
+        <div class="acc">
+            <h1>Accomplishments</h1>
+            <div class="acc__container">
+                <div class="acc__container--left">
+                    <div class="part">
+                        <h2>Best Delegate</h2>
+                        <p>At the Prince of Wales Secondary School Model United Nations Conference (2022) I won the Best Delegate award in a General Assembly committee.</p>
+                        <img src="images/pwv.png" alt="certificate" class="acc__container--img">
+                    </div>
+                    <div class="part">
+                        <h2>Peel Skills Challenge</h2>
+                        <p>Placed second in a regional skills competition in the category of Animation at the Intermediate division in 2018.</p>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/N9nillzDaa4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div>
-                    <h2>🗑️ <a href="https://photos.app.goo.gl/Sv5ba8cjqtFKpbjDA">Community Cleanup<a></h5>
-                    <p>In the summer of 2020 I organized a garbage cleanup in my community and we collected over 9 bags of garbage in just one day!</p>
-                    <p>If you see garbage in your neighbourhood, grab some gloves, garbage bags, and friends and just go pick up garbage!</p>
-                </div>
-                <div>
-                    <h2>💯 <a href="https://cs50.harvard.edu/x/">CS50x</a></h5>
-                    <p>CS50x, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming</p>
-                    <p>I completed this course in December 2021 and it really sparked my curiosity for Computer Science!</p>
-                </div>
-                <div>
-                    <h2>🕸️ <a href="https://cs50.harvard.edu/web/">CS50w (CS50 Web)</a></h5>
-                    <p>This is one of the follow up courses to CS50x, this focuses more on Web Development and building sites.</p>
-                    <p>I am currently working on this course and hope to finish within the next few months.</p>
+                <div class="acc_container--right">
+                    <div class="part">
+                        <h2>CS50x</h2>
+                        <p>In December 2021, I completed CS50x, Harvard University's introduction to the intellectual enterprises of computer science and the art of programming.</p>
+                        <img src="images/cs50.png" alt="certificate" class="acc__container--img">
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <span>
-                <a class="button" href="/">🏠 Home</a>
-                <a class="button" href="/socials.html">📱 Socials</a>
-                <a class="button" href="/accomplishments.html">🏅 Accomplishments</a>
-                <a class="button" href="/hobbies.html">🥏 Hobbies</a>
-                <a class="button" href="/clubs.html">⛳ Clubs</a>
-            </span>
+        <div class="socials">
+            <div class="icon discord">
+                <p class="tooltip">AIRMaster124#6631</p>
+                <span><i class="fab fa-discord"></i></span>
+            </div>
+            <a href="https://twitter.com/shahv99" target="_blank"><div class="icon twitter">
+                <p class="tooltip">Twitter</p>
+                <span><i class="fab fa-twitter"></i></span>
+            </div></a>
+            <a href="https://www.instagram.com/vansh_shah_2006/" target="_blank"><div class="icon instagram">
+                <p class="tooltip">Instagram</p>
+                <span><i class="fab fa-instagram"></i></span>
+            </div></a>
+            <a href="https://github.com/vansh2006" target="_blank"><div class="icon github">
+                <p class="tooltip">Github</p>
+                <span><i class="fab fa-github"></i></span>
+            </div></a>
         </div>
     </body>
     <footer>
-        <p>Copyright © 2022</p>
+        <p class="copyright">Copyright © 2022</p>
     </footer>
 </html>
