@@ -219,6 +219,11 @@
     .github:hover .tooltip:before{
       background: $github;
     }
+    .linkedin:hover span,
+    .linkedin:hover .tooltip,
+    .linkedin:hover .tooltip:before{
+      background: $linkedin;
+    }
 
     .icon:hover .tooltip{
         top: -70px;
@@ -469,6 +474,73 @@
         &--img {
             height: 70%;
             width: 70%;
+        }
+
+    }
+}
+
+// More about me stuff CSS
+.media {
+    background-color: $light;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+
+
+    &__container {
+        display: flex;
+        align-items: center;
+        height: 30vh;
+        z-index: 1;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 10vw;
+        padding-bottom: 5vh;
+
+
+        h2 {
+            font-size: 3rem;
+            color: $dark;
+
+            @include mobile {
+                font-size: 2rem;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            color: $darkText;
+            padding-left: 2rem;
+
+            @include mobile {
+                font-size: 1.5rem;
+                padding-left: 0.5rem;
+            }
+        }
+        .twitter:hover {
+            color: $twitter;
+        }
+        .linkedin:hover {
+            color: $linkedin;
+        }
+        .instagram:hover {
+            color: $instagram;
+        }
+        .discord:hover{
+            color: $discord;
+        }
+        .github:hover {
+            color: $gray;
+        }
+
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            height: 100%;
+        }
+
+
+        a {
+            position: relative;
+            text-decoration: none;
         }
 
     }

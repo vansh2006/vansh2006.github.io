@@ -268,6 +268,11 @@
 .socials .github:hover .tooltip:before {
   background: #333;
 }
+.socials .linkedin:hover span,
+.socials .linkedin:hover .tooltip,
+.socials .linkedin:hover .tooltip:before {
+  background: #0072b1;
+}
 .socials .icon:hover .tooltip {
   top: -70px;
   opacity: 1;
@@ -501,4 +506,64 @@
 .about__container--img {
   height: 70%;
   width: 70%;
+}
+
+.media {
+  background-color: #f7f7f7;
+  padding: 0.5rem calc((100vw - 1200px) / 2);
+}
+.media__container {
+  display: flex;
+  align-items: center;
+  height: 30vh;
+  z-index: 1;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 10vw;
+  padding-bottom: 5vh;
+}
+.media__container h2 {
+  font-size: 3rem;
+  color: #222121;
+}
+@media screen and (max-width: 200px) {
+  .media__container h2 {
+    font-size: 2rem;
+  }
+}
+.media__container p {
+  font-size: 2rem;
+  color: #363636;
+  padding-left: 2rem;
+}
+@media screen and (max-width: 200px) {
+  .media__container p {
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+  }
+}
+.media__container .twitter:hover {
+  color: #46C1F6;
+}
+.media__container .linkedin:hover {
+  color: #0072b1;
+}
+.media__container .instagram:hover {
+  color: #e1306c;
+}
+.media__container .discord:hover {
+  color: #7289d9;
+}
+.media__container .github:hover {
+  color: rgb(144, 144, 144);
+}
+@media screen and (max-width: 1000px) {
+  .media__container {
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+.media__container a {
+  position: relative;
+  text-decoration: none;
 }/*# sourceMappingURL=styles.css.map */
