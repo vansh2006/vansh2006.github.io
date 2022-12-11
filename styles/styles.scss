@@ -480,41 +480,70 @@
 }
 
 // More about me stuff CSS
-.media {
+.details {
     background-color: $light;
-    padding: 0.5rem calc((100vw - 1200px)/2);
+    padding: 1rem calc((100vw - 1200px)/2);
 
 
     &__container {
         display: flex;
-        align-items: center;
-        height: 30vh;
+        flex-direction: column;
+        height: auto;
         z-index: 1;
         max-width: 1200px;
         padding-right: 24px;
-        padding-left: 10vw;
-        padding-bottom: 5vh;
+        padding-left: 1vw;
+        padding-bottom: 2vh;
 
+
+        &--section {
+            padding-left: 2vw;
+            padding-top: 1vh;
+            padding-bottom: 1vh;
+        }
 
         h2 {
             font-size: 3rem;
-            color: $dark;
+            color: $lime;
 
             @include mobile {
                 font-size: 2rem;
             }
         }
 
-        p {
+        h3 {
             font-size: 2rem;
             color: $darkText;
-            padding-left: 2rem;
+
+            @include mobile {
+                font-size: 1rem;
+            }
+        }
+
+        p {
+            font-size: 2rem;
+            color: $dark;
+            font-weight: 600;
 
             @include mobile {
                 font-size: 1.5rem;
                 padding-left: 0.5rem;
             }
         }
+        h4 {
+            font-size: 1.75rem;
+            color: $dark;
+            text-decoration: none;
+            font-weight: normal;
+            padding-top: 0.5vh;
+            padding-bottom: 0.5vh;
+
+            @include mobile {
+                font-size: 1rem;
+                padding-left: 0.5rem;
+            }
+        }
+
         .twitter:hover {
             color: $twitter;
         }
@@ -541,6 +570,11 @@
         a {
             position: relative;
             text-decoration: none;
+            color: $dark;
+        }
+
+        a:hover {
+            color: $aquaBlue;
         }
 
     }

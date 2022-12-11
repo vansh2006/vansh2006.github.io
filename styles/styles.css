@@ -508,62 +508,94 @@
   width: 70%;
 }
 
-.media {
+.details {
   background-color: #f7f7f7;
-  padding: 0.5rem calc((100vw - 1200px) / 2);
+  padding: 1rem calc((100vw - 1200px) / 2);
 }
-.media__container {
+.details__container {
   display: flex;
-  align-items: center;
-  height: 30vh;
+  flex-direction: column;
+  height: auto;
   z-index: 1;
   max-width: 1200px;
   padding-right: 24px;
-  padding-left: 10vw;
-  padding-bottom: 5vh;
+  padding-left: 1vw;
+  padding-bottom: 2vh;
 }
-.media__container h2 {
+.details__container--section {
+  padding-left: 2vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+}
+.details__container h2 {
   font-size: 3rem;
-  color: #222121;
+  color: #00cc66;
 }
 @media screen and (max-width: 200px) {
-  .media__container h2 {
+  .details__container h2 {
     font-size: 2rem;
   }
 }
-.media__container p {
+.details__container h3 {
   font-size: 2rem;
   color: #363636;
-  padding-left: 2rem;
 }
 @media screen and (max-width: 200px) {
-  .media__container p {
+  .details__container h3 {
+    font-size: 1rem;
+  }
+}
+.details__container p {
+  font-size: 2rem;
+  color: #222121;
+  font-weight: 600;
+}
+@media screen and (max-width: 200px) {
+  .details__container p {
     font-size: 1.5rem;
     padding-left: 0.5rem;
   }
 }
-.media__container .twitter:hover {
+.details__container h4 {
+  font-size: 1.75rem;
+  color: #222121;
+  text-decoration: none;
+  font-weight: normal;
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
+}
+@media screen and (max-width: 200px) {
+  .details__container h4 {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+  }
+}
+.details__container .twitter:hover {
   color: #46C1F6;
 }
-.media__container .linkedin:hover {
+.details__container .linkedin:hover {
   color: #0072b1;
 }
-.media__container .instagram:hover {
+.details__container .instagram:hover {
   color: #e1306c;
 }
-.media__container .discord:hover {
+.details__container .discord:hover {
   color: #7289d9;
 }
-.media__container .github:hover {
+.details__container .github:hover {
   color: rgb(144, 144, 144);
 }
 @media screen and (max-width: 1000px) {
-  .media__container {
+  .details__container {
     grid-template-columns: 1fr;
     height: 100%;
   }
 }
-.media__container a {
+.details__container a {
   position: relative;
   text-decoration: none;
+  color: #222121;
+}
+.details__container a:hover {
+  color: #0d91b3;
 }/*# sourceMappingURL=styles.css.map */
