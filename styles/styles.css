@@ -18,7 +18,15 @@
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   margin-left: 24px;
+  align-items: center;
+  justify-content: center;
 }
 .navbar__img {
   width: 8rem;
@@ -423,6 +431,9 @@
     grid-template-columns: 1fr;
     height: 100%;
   }
+}
+.about__container--left {
+  text-align: center;
 }
 .about__container--right {
   width: 100%;
